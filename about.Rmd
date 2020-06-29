@@ -1,0 +1,10 @@
+---
+title: "About This Website"
+---
+
+More about this website.
+
+```{r, echo=FALSE}
+x = 1:10
+print(x)
+```
