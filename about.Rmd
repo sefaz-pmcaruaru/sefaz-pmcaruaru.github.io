@@ -14,7 +14,6 @@ source("C:/Users/ewert/OneDrive/Documentos/covid/indicadores.R")
 
 
 ```{r plot_x, echo=FALSE}
-
 print(p1)
 ```
 
@@ -23,6 +22,6 @@ print(p2)
 ```
 
 Mortes por Covid-19 a cada 100 mil Habitantes - Comparação entre Municípios
-```{r plot_z test_chunk}
+```{r plot_z}
 print(p8)
 ```
