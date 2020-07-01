@@ -1,27 +1,11 @@
 ---
 title: "About This Website"
 ---
-
-More about this website.
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.width=12, fig.height=8, echo=FALSE, warning=FALSE, message=FALSE)
 ```
 
-```{r source_chunk, include=FALSE}
-source("C:/Users/ewert/OneDrive/Documentos/covid/indicadores.R")
+São Utilizados os dados relativos a casos confirmados e óbitos obtidos da Secretaria Estadual de Saúde, organizados e distribuídos pelo site Brasil.io:
 
-```
+https://brasil.io/dataset/covid19/caso_full/?search=&epidemiological_week=&date=&order_for_place=&state=PE&city=&city_ibge_code=&place_type=&last_available_date=&is_last=&is_repeated=
 
-
-```{r plot_x, echo=FALSE}
-print(p1)
-```
-
-```{r plot_y, echo=FALSE}
-print(p2)
-```
-
-Mortes por Covid-19 a cada 100 mil Habitantes - Comparação entre Municípios
-```{r plot_z}
-print(p8)
-```

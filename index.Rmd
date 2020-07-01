@@ -1,17 +1,92 @@
 ---
-title: "My Website"
+title: "Indicadores Covid-19 Caruaru"
+output: 
+  flexdashboard::flex_dashboard
 ---
+
+Números {data-orientation=rows}
+=====================================
 
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.width=12, fig.height=8, echo=FALSE, warning=FALSE, message=FALSE)
 ```
 
-Hello, Website!
-
-For more information about simple R Markdown websites, please read the documentation at https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html.
-
-Please also note that simple R Markdown sites are _not_ based on **blogdown**. They are probably good for websites with only a few Rmd documents. For larger-scale and more sophisticated websites (such as blogs), you may want to use **blogdown** instead: https://github.com/rstudio/blogdown.
-
-```{r test_chunk}
-print(p8)
+```{r setup, include=FALSE}
+library(plotly)
 ```
+
+```{r source_chunk, include=FALSE}
+source("C:/Users/ewert/OneDrive/Documentos/covid/indicadores.R")
+```
+
+### Casos Confirmados no último dia em Caruaru
+
+```{r v1}
+flexdashboard::valueBox(last_new_confirmed$new_confirmed, icon = "fa-pencil")
+```
+
+### Mortes no último dia em Caruaru
+
+```{r v2}
+flexdashboard::valueBox(last_new_death$new_deaths, icon = "fa-pencil")
+```
+
+### Total de Casos Confirmados em Caruaru
+
+```{r v3}
+flexdashboard::valueBox(total_confirmed$last_available_confirmed, icon = "fa-pencil")
+```
+
+### Total de Mortes em Caruaru
+
+```{r v4}
+flexdashboard::valueBox(total_death$last_available_deaths, icon = "fa-pencil")
+```
+
+
+Gráficos {data-orientation=columns}
+=====================================
+
+Column {.tabset}
+-------------------------------------
+
+### Gráfico 1
+
+```{r p1}
+ggplotly(p1)
+```
+
+
+### Gráfico 2
+
+```{r p2}
+ggplotly(p2)
+```
+
+### Gráfico 3
+
+```{r p3}
+ggplotly(p3)
+```
+
+
+### Gráfico 4
+
+```{r p4}
+ggplotly(p4)
+```
+
+
+### Gráfico 5
+
+```{r p5}
+ggplotly(p5)
+```
+
+
+### Gráfico 6
+
+```{r p6}
+ggplotly(p6)
+```
+

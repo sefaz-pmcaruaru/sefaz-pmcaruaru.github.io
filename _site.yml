@@ -1,9 +1,7 @@
-name: "my-website"
+name: "Indicadores Covid-19 Caruaru"
 navbar:
-  title: "My Website"
+  title: "Indicadores"
   left:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
 output_dir: "."
