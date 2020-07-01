@@ -13,6 +13,7 @@ knitr::opts_chunk$set(fig.width=12, fig.height=8, echo=FALSE, warning=FALSE, mes
 
 ```{r setup, include=FALSE}
 library(plotly)
+library(flexdashboard)
 ```
 
 ```{r source_chunk, include=FALSE}
@@ -22,25 +23,25 @@ source("C:/Users/ewert/OneDrive/Documentos/covid/indicadores.R")
 ### Casos Confirmados no último dia em Caruaru
 
 ```{r v1}
-flexdashboard::valueBox(last_new_confirmed$new_confirmed, icon = "fa-pencil")
+valueBox(last_new_confirmed$new_confirmed, icon = "fas fa-cross")
 ```
 
 ### Mortes no último dia em Caruaru
 
 ```{r v2}
-flexdashboard::valueBox(last_new_death$new_deaths, icon = "fa-pencil")
+valueBox(last_new_death$new_deaths, icon = "fas fa-cross")
 ```
 
 ### Total de Casos Confirmados em Caruaru
 
 ```{r v3}
-flexdashboard::valueBox(total_confirmed$last_available_confirmed, icon = "fa-pencil")
+valueBox(total_confirmed$last_available_confirmed, icon = "fas fa-cross")
 ```
 
 ### Total de Mortes em Caruaru
 
 ```{r v4}
-flexdashboard::valueBox(total_death$last_available_deaths, icon = "fa-pencil")
+valueBox(total_death$last_available_deaths, icon = "fas fa-cross")
 ```
 
 
@@ -50,43 +51,51 @@ Gráficos {data-orientation=columns}
 Column {.tabset}
 -------------------------------------
 
-### Gráfico 1
+### Casos Semanais
 
 ```{r p1}
 ggplotly(p1)
 ```
 
+> Casos por Semana Epidemiológica em Caruaru
 
-### Gráfico 2
+### Mortes Semanais
 
 ```{r p2}
 ggplotly(p2)
 ```
 
-### Gráfico 3
+> Mortes por Semana Epidemiológica em Caruaru
+
+### Novas Mortes
 
 ```{r p3}
 ggplotly(p3)
 ```
 
+> Novas Mortes por Covid 19 (Média Móvel 7 dias) em Caruaru
 
-### Gráfico 4
+
+### Novos Casos
 
 ```{r p4}
 ggplotly(p4)
 ```
 
+> Novos Casos de Covid 19 (Média Móvel 7 dias) em Caruaru
 
-### Gráfico 5
+### Comparação - Novos Casos
 
 ```{r p5}
 ggplotly(p5)
 ```
 
+> Novos Casos de Covid 19 (Média Móvel 7 dias) - Comparação entre Municípios
 
-### Gráfico 6
+### Comparação - Novas Mortes
 
 ```{r p6}
 ggplotly(p6)
 ```
 
+> Novas Mortes por Covid 19 (Média Móvel 7 dias) - Comparação entre Municípios  
