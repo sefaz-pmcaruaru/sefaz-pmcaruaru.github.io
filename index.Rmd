@@ -20,6 +20,12 @@ library(flexdashboard)
 source("C:/Users/ewert/OneDrive/Documentos/covid/indicadores.R")
 ```
 
+### Data da Última Atualização
+
+```{r vdata}
+valueBox(data_maisrec, icon = "fas fa-cross")
+```
+
 ### Casos Confirmados no último dia em Caruaru
 
 ```{r v1}
